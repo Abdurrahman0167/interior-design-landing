@@ -1,0 +1,1045 @@
+/* начальные стили */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --primary-600: #996830;
+    --primary-300: #c4a386;
+    --primary-100: #e6d8cc;
+    --neutral-900: #2c2c2c;
+    --neutral-700: #444;
+    --neutral-500: #7c7c7c;
+    --neutral-300: #d9d9d6;
+    --neutral-100: #e5e5e5;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: "link-font", sans-serif;
+}
+
+.img__small {
+    width: 120px;
+    height: 120px;
+}
+
+p {
+    color: var(--neutral-700);
+    font-family: "description-font", serif;
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "title-fonts" serif;
+}
+
+.name__sect {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 3.75rem;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--neutral-900);
+    margin-top: 0;
+}
+
+.gold__line {
+    border: 1px solid var(--primary-600);
+    width: 64px;
+    height: 0px;
+    margin-right: 1em;
+}
+
+.section__name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 143%;
+    letter-spacing: 0.1em;
+    color: var(--primary-600);
+}
+
+figure {
+    margin: 0;
+}
+
+.gray__line {
+    width: 100%;
+    height: 0;
+    border: solid 1px var(--neutral-300);
+}
+
+header>figure {
+    background: white;
+}
+
+/* cтили для header */
+
+
+
+header {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.625em 7em 0;
+    margin-bottom: 6.25em;
+}
+
+.menu__list,
+.menu__left,
+.menu__right {
+    display: flex;
+    align-items: center;
+}
+
+.menu__list {
+    gap: 3.428571428571429em;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 171%;
+}
+
+.menu__link {
+    color: var(--neutral-700);
+    position: relative;
+}
+
+.link__btn {
+    color: #fff;
+    font-size: 0.875rem;
+    background: var(--primary-600);
+    padding: 1em 3.142857142857143em 1em 1.428571428571429em;
+    position: relative;
+}
+
+.menu__link--after::after {
+
+    opacity: 0.7;
+    transition: width 0.4s ease;
+}
+
+.menu__link--after:hover::after {
+    width: 100%;
+}
+
+.link__btn::after {
+    content: url(../img/icons/tap.svg);
+    position: absolute;
+    top: 28%;
+    transform: translate(-50%);
+    width: 0.875rem;
+    height: 0.875rem;
+    margin-left: 0.7021428571428571em;
+    transition: width 0.4s ease;
+}
+
+.menu__link--btn:hover::after {
+    right: 18px;
+}
+
+.title {
+    line-height: 133%;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    font-size: 4.5rem;
+    margin-bottom: 0.3333333333333333em;
+    counter-reset: var(--neutral-900);
+}
+
+.subtitle {
+    max-width: 800px;
+    margin: 0 auto 4em;
+    font-size: 1.25rem;
+    line-height: 160%;
+    font-weight: 300;
+}
+
+.header__images {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.header__img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    background: var(--neutral-900);
+}
+
+.header__images--img {
+    width: 100%;
+    height: auto;
+}
+
+.header__images--btn {
+    position: absolute;
+    top: -9.5%;
+    left: 112px;
+}
+
+/* стили для section-awards */
+
+.header__awards {
+    background: var(--neutral-900);
+    color: #fff;
+    padding: 1em 7em 1.5em;
+
+}
+
+.awards__name {
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--white);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 133%;
+    font-size: 1.5rem;
+    margin: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    opacity: 0.5;
+}
+
+.grey__line {
+    width: 64px;
+    border: 1px solid;
+    opacity: 0.5;
+}
+
+.awards__line {
+    margin: 0 1.25em;
+}
+
+.awards__img {
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+}
+
+.awards__description {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 171%;
+    color: var(--neutral-300);
+    max-width: 134px;
+    text-align: left;
+    margin: 0;
+}
+
+picture {
+    background: none;
+}
+
+.header__awards,
+.awards__left,
+.awards__right {
+    display: flex;
+    align-items: center;
+}
+
+.awards__right {
+    gap: 4em;
+
+}
+
+.awards__item {
+    display: flex;
+    align-items: center;
+}
+
+/* cтилизация секции about__us */
+
+.about__us--title {
+    font-weight: 400;
+    font-size: 3.75rem;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #2c2c2c;
+}
+
+.about__us {
+    padding: 8em 7em 3em;
+}
+
+.about__us--flex {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 7em;
+}
+
+.about__us--first,
+.about__us--second {
+    max-width: 592px;
+}
+
+.about__us--description {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 178%;
+    max-width: 592px;
+}
+
+.about__us--first {
+    padding: 4.125em 0;
+}
+
+.about__us--second {
+    position: relative;
+    display: flex;
+    gap: 8px;
+}
+
+.awards__logo {
+    position: absolute;
+    top: 0.5%;
+    left: 52%;
+    transform: translate(-50%, -49%);
+    border: none;
+}
+
+.about__us--first_img,
+.about__us--second_img {
+    display: block;
+}
+
+.about__us--second_img {
+    margin-top: 80px;
+}
+
+.about__us--footer,
+.about__footer--text-container {
+    display: flex;
+    padding: 0;
+}
+
+.about__us--footer {
+    justify-content: space-between;
+
+}
+
+.about__footer--item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+.about__us--big-text {
+    font-weight: 400;
+    font-size: 3.75rem;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--neutral-900);
+}
+
+.about__us--small-text {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 143%;
+    letter-spacing: 0.05em;
+    color: var(--neutral-900);
+}
+
+.our__services {
+    padding: 7em;
+}
+
+.our__services--title {
+    max-width: 800px;
+    margin-bottom: 3.3333em;
+}
+
+.our__services--flex {
+    display: flex;
+    gap: 32px;
+}
+
+.our__services--item {
+    max-width: 384px;
+    border: 1px solid #e6d8cc;
+    padding: 2.5em;
+}
+
+.services__item--img {
+    margin-bottom: 5em;
+}
+
+.services__item--title {
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 133%;
+    color: var(--neutral-900);
+    margin-bottom: 0.4444em;
+}
+
+.services__item--description {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 178%;
+    color: var(--neutral-700);
+}
+
+/* cтилизация секции recent__work */
+
+.recent__work {
+    padding: 7em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit 2, auto);
+    grid-auto-rows: minmax(1);
+    column-gap: 2em;
+    row-gap: 5em;
+}
+
+.recent__text {
+    max-width: 555px;
+}
+
+.recent__work--title {
+    margin-bottom: 1.6em;
+}
+
+.img__title {
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 133%;
+    color: var(--neutral-900);
+    margin-bottom: 1rem;
+}
+
+.img__description {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--neutral-700);
+    margin: 0;
+}
+
+.img__description--width592px {
+    max-width: 592px;
+}
+
+.img__description--width480px {
+    max-width: 480px;
+}
+
+.recent__btn {
+    max-width: 158px;
+    max-height: 56px;
+}
+
+.furnising__img {
+    width: 100%;
+    height: auto;
+}
+
+.luxury__img,
+.swinigPool__img {
+    margin: 0 auto;
+}
+
+.left__item {
+    grid-row: 1;
+}
+
+.right__item {
+    grid-row: 2;
+}
+
+.recent__text {
+    grid-column: 1 /2;
+}
+
+.furnising__img {
+    grid-row: 2;
+    grid-column: 1 / 2;
+}
+
+.btn {
+    grid-row: 1;
+    grid-column: 1 / 2;
+    align-self: end;
+    margin-bottom: 3.5em;
+}
+
+.luxury__img {
+    grid-row: 1;
+    grid-column: 2 / 3;
+    margin-bottom: 5em;
+}
+
+.swinigPool__img {
+    grid-row: 2;
+    grid-column: 2 / 3;
+}
+
+.right__img {
+    margin: 0 auto;
+}
+
+.line--grid {
+    grid-column: span 2;
+}
+
+/* стилизация footer */
+
+footer {
+    padding: 0 7em;
+}
+
+.footer-left__link,
+.footer-right__link {
+    font-family: "title-fonts", serif;
+}
+
+.footer__first,
+.footer__end {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__title {
+    max-width: 492px;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 125%;
+    color: var(--neutral-900);
+    margin-bottom: 0.3333em;
+}
+
+
+.footer-left__link {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 125%;
+    position: relative;
+}
+
+.footer-left__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-600);
+}
+
+.footer__first {
+    padding: 5em 0 5.5em;
+}
+
+.first--right {
+    max-width: 280px;
+}
+
+.text--gold {
+    color: var(--primary-600);
+}
+
+.footer-right__link {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 133%;
+    color: #996830;
+}
+
+.first--right>p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--neutral-900);
+}
+
+.footert-right__title {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.footer-right__description {
+    max-width: 270px;
+}
+
+.first--right>a {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 133%;
+}
+
+.footer__end {
+    padding: 5em 0;
+    align-items: center;
+}
+
+.end--right,
+.end__list {
+    display: flex;
+}
+
+.end__list {
+    gap: 24px;
+}
+
+.end--right {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy {
+    margin: 0;
+}
+
+.footer--right-text {
+    display: flex;
+    align-items: center;
+}
+
+.end__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.1em;
+    color: var(--neutral-700);
+    opacity: 0.8;
+    margin: 0;
+}
+
+.end__line {
+    width: 64px;
+    height: 0;
+    border: 1px solid var(--neutral-700);
+    opacity: 0.8;
+    margin: 0 1.5em 0 1em;
+}
+
+/* подключаем шрифты */
+
+@font-face {
+    font-family: title-fonts;
+    src: url(../fonts/PlayfairDisplay-Regular.woff);
+}
+
+@font-face {
+    font-family: description-font;
+    src: url(../fonts/Outfit-Light.woff);
+}
+
+@font-face {
+    font-family: link-font;
+    src: url(../fonts/Outfit-Medium.woff);
+}
+
+
+/* адоптащия под планшет */
+@media (min-width: 600px) and (max-width: 900px) {
+
+    /* header */
+
+    .header__images--btn {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .menu {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    .title {
+        max-width: 688px;
+        margin: 0 auto 0.3333em;
+    }
+
+    .subtitle {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .header__images--btn {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .header__awards {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        margin: 0 auto;
+    }
+
+    .awards__right {
+        flex-wrap: wrap;
+
+    }
+
+    /* about__us */
+    .about__us {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    .about__us--flex {
+        display: block;
+    }
+
+    .about__us--second {
+        max-width: 688px;
+        justify-content: center;
+        margin-bottom: 6em;
+    }
+
+
+
+    .about__footer--item {
+        display: block;
+    }
+
+    .about__us--big-text {
+        margin-bottom: 0.133em;
+    }
+
+    /* our services */
+
+    .our__services {
+        padding: 0 2.5em 6em;
+    }
+
+    .our__services--title {
+        margin-bottom: 1.3333em;
+    }
+
+    .our__services--flex {
+        display: block;
+    }
+
+    .our__services--item {
+        max-width: 688px;
+        margin-bottom: 2em;
+    }
+
+    .our__services--item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* recent__work */
+
+    .recent__work {
+        display: block;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    .recent__work,
+    .right__img,
+    .recent__text {
+        max-width: 688px;
+    }
+
+    .img__description {
+        font-weight: 300;
+        margin-bottom: 4.444em;
+        max-width: 688px;
+    }
+
+    .recent__btn {
+        top: -0.9995em;
+        padding-right: 2.7em;
+    }
+
+    footer {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    .footer__first {
+        display: block;
+    }
+
+    .first--left {
+        margin-bottom: 3em;
+    }
+
+    .footer__end {
+        display: block;
+    }
+
+    .copy {
+        margin-bottom: 2em;
+    }
+
+    .end--right {
+        justify-content: start;
+    }
+}
+
+
+/* адоптащия под телефон */
+@media (min-width: 360px) and (max-width: 450px) {
+
+    /* обшие стили */
+    .our__services--title,
+    .about__us--title,
+    .recent__work--title {
+        font-size: 2.25rem;
+    }
+
+    /* header */
+
+    .header__images--btn {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .title {
+        font-size: 3rem;
+        max-width: 305px;
+        margin: 0 auto 0.5em;
+    }
+
+    .subtitle {
+        font-size: 1.125rem;
+        max-width: 305px;
+        margin: 0 auto 4.4444em;
+    }
+
+    .header__awards {
+        padding: 3em 1.25em;
+        align-items: start;
+    }
+
+    .menu__list {
+        display: block;
+    }
+
+
+
+    .link__btn {
+        padding: 0.75em 2.50em 0.75em 1.25em;
+    }
+
+    .awards__right {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+
+
+    .menu {
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .header__awards {
+        padding: 3em 1.25em;
+        align-items: start;
+    }
+
+    .menu__list {
+        display: block;
+    }
+
+    .link__btn {
+        padding: 0.75em 2.50em 0.75em 1.25em;
+    }
+
+    .awards__right {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    /* secti9on about__us */
+
+    .about__us {
+        padding: 3em 1.25em;
+    }
+
+    .about__us--description {
+        font-size: 1rem;
+        margin-bottom: 1.5em;
+    }
+
+    .about__us--flex {
+        display: block;
+    }
+
+    .about__us--second {
+        justify-content: center;
+    }
+
+    .about__us--footer {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .about__footer--item {
+        margin: 0;
+        max-height: 60px;
+        align-items: center;
+    }
+
+    .about__footer--item>p {
+        margin: 0;
+    }
+
+    .about__us--big-text {
+        font-size: 3rem;
+    }
+
+    .about__footer--item:last-child {
+        margin-bottom: 3em;
+    }
+
+    /* section our__services */
+
+    .our__services {
+        padding: 3em 1.25em;
+    }
+
+    .our__services--title {
+        max-width: 100%;
+    }
+
+    .our__services--flex {
+        flex-direction: column;
+    }
+
+    .our__services--item {
+        padding: 2em;
+    }
+
+    .services__item--img {
+        margin-bottom: 1.5em;
+    }
+
+    .services__item--title {
+        font-size: 1.875rem;
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    .services__item--description {
+        margin: 0;
+    }
+
+    /* section recent__work*/
+
+    .recent__work {
+        padding: 3em 1.25em;
+        display: block;
+    }
+
+    .img__title {
+        font-size: 1.5rem;
+    }
+
+    .img__description {
+        font-size: 0.875rem;
+        max-width: 100%;
+        margin-bottom: 2.85714em;
+        /* margin-bottom: 2rem; */
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img__description:last-child {
+        margin-bottom: 3.4285em;
+    }
+
+    .recent__btn {
+        top: 0.7em;
+    }
+
+    .btn {
+        /* для кнопки испольжуется позиционирование поэтомо не удается выровнять ее стандартным способом поэтому я сделал несколько мат. операций */
+        margin-bottom: 3.6125em;
+    }
+
+    .luxury__img {
+        margin-bottom: 0;
+    }
+
+    footer {
+        padding: 3em 1.25em 2.5em;
+
+    }
+
+    .footer__first {
+        flex-direction: column;
+        gap: 3em;
+        padding: 0 0 3em;
+    }
+
+    .footer__title,
+    .footer-left__link {
+        font-size: 1.875rem;
+    }
+
+    .footer-right__description {
+        margin-bottom: 2.285714em;
+    }
+
+    .mail {
+        display: block;
+        margin-bottom: 1.3333em;
+    }
+
+    .email__text,
+    .number__text {
+        margin-bottom: 0.57142em;
+    }
+
+    .footer__end {
+        padding: 2.5em 0 0;
+        display: block;
+    }
+
+    .copy {
+        margin-bottom: 2em;
+    }
+
+    .end--right {
+        display: block;
+    }
+
+    .footer--right-text {
+        margin-bottom: 1em;
+    }
+}

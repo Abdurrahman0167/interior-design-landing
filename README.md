@@ -3,5 +3,5 @@
 ## ⚙ **Адаптив:** есть!
 
 ## 🍳 ссылка 
-[смотреть]( https://abdurrahman0167.github.io/bella-olanje-landing/)
+[смотреть]( https://abdurrahman0167.github.io/interior-design-landing/)
 
